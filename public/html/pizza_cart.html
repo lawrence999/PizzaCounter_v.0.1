@@ -1,0 +1,25 @@
+    <div align="center" style="padding:150">
+
+    <table width="50%">
+        <tr>
+            <td align="center"><h4>PIZZA</h4></td>
+            <td align="center"><h4>Rate Per Peice</h4></td>
+            <td align="center"><h4>Quantity</h4></td>
+            <td align="center"><h4>Total Per Pizza</h4></td>
+        </tr>
+        <tr ng-repeat="pizza in details">
+            <td align="center">{{pizza.pname}}</td>
+            <td align="center">&#8377 {{pizza.rate}} /-</td>
+            <td align="center">X {{pizza.qty}}</td>
+            <td align="center">&#8377 {{pizza.cost}} /-</td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center"><h4><i>GRAND TOTAL : &#8377 {{total}} /-</i></h4></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><a href="index.html">Continue Purchase</a></td>
+            <td colspan="2" align="center"><a href="#/placeorder">Finish</a></td>
+        </tr>
+    </table>
+    </div>
+

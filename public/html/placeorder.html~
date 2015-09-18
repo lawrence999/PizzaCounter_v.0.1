@@ -1,0 +1,11 @@
+<center>
+<h1>Enter your details here!</h1>
+<br><br><br>
+Name:<input type="text" ng-model="user.fname">
+    <br><br>
+    Address:<input type="text" ng-model="user.add">
+    <br><br>
+    contactno:<input type="number" ng-model="user.no">
+    <br><br>
+    <button ng-click="message()">SUBMIT</button>
+    </center>

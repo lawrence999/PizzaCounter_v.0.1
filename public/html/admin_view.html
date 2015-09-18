@@ -1,0 +1,26 @@
+    <center>
+    <h1><i>ORDER SUMMARY</i></h1>
+     <table style="width:100%" border="1">
+        <tr>
+            <th><h1>Customer Name</h1></th>
+            <th><h1>Delivery Address</h1></th>
+            <th><h1>Phone</h1></th>
+            <th><h1>Order Details</h1></th>
+            <th><h1>Delivery status</h1></th>
+        </tr>
+        <tr ng-repeat="pizza in details">
+            <td align="center">{{pizza.fname}}</td>
+            <td align="center">{{pizza.add}}</td>
+            <td align="center">{{pizza.no}}</td>
+            <td>
+                <ul ng-repeat="i in pizza.order">
+                    <li>Pizzaname:{{i.pname}}</li>
+                    <li>Pizzarate:{{i.rate}}</li>
+                    <li>Quantity:{{i.qty}}</li>
+                    <li>Cost:{{i.cost}}</li>
+                </ul>
+            </td>
+            <td align="center"> <a href="#/delivered/{{pizza._id}}">Delivered</a></td>
+        </tr>
+    </table>
+    </center>

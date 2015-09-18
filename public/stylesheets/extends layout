@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  table 
+   tr
+    th Name
+    th Image
+    th Description
+    th Rate
+   -each item in user 
+    tr
+     td=item.name
+     td=item.image
+     td=item.description
+     td=item.rate
