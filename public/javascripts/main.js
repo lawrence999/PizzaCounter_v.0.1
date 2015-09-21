@@ -1,4 +1,4 @@
-        var pApp = angular.module('pApp', ['ngRoute']);
+        var pApp = angular.module('pApp', ['ngRoute', 'ngAnimate']);
           pApp.config(function($routeProvider) {
             $routeProvider
                 .when('/', {
@@ -33,7 +33,7 @@
         pApp.service('DataService', function (){
         var plist = [];
         var total=0;
-            this.order_d = function(user) {          
+            this.order_d = function(user) {
                 plist.push(user);
                 total=total+user.cost;
             };
@@ -49,6 +49,7 @@
         });
 
         pApp.controller('pizzaCtrl', function ($scope, $http){
+          $scope.pageClass = 'page-home';
             $http.get('/pizza').success(function(data) {
             $scope.details = data;
             console.log($scope.details);
@@ -56,6 +57,7 @@
         });
 
         pApp.controller('deliverCtrl', function ($scope, $http,$routeParams){
+          $scope.pageClass = 'page-about';
             $scope.Contactno=$routeParams.Contactno;
             $scope.postcontact={};
             $scope.postcontact.Contactno=$scope.Contactno;
@@ -63,7 +65,7 @@
                 method  : 'POST',
                 url     : '/update',
                 data    : $scope.postcontact, //forms user object
-                headers : {'Content-Type': 'application/json'} 
+                headers : {'Content-Type': 'application/json'}
             })
             .success(function(data) {
                 alert("successfully delivered");
@@ -82,12 +84,12 @@
 
             $http.get('/pizzaview').success(function(data) {
                 $scope.details = data;
-            }); 
+            });
         });
 
         pApp.controller('pizzaDetailsCtrl', function ($scope, $routeParams, $http,DataService){
+          $scope.pageClass = 'page-contact';
             $scope.name = $routeParams.pizzaName;
-
             $http.get('/pizza').success(function(data) {
 
                 $scope.pizza = data.filter(function(entry){
@@ -108,6 +110,7 @@
         });
 
         pApp.controller('pizzaorderCtrl', function ($scope, $http,DataService){
+          $scope.pageClass = 'page-home';
               $scope.details = DataService.view_order();
               $scope.total=DataService.grand_total();
               console.log($scope.details);
@@ -115,6 +118,7 @@
         });
 
         pApp.controller('placeorderCtrl', function ($scope,$http,DataService){
+          $scope.pageClass = 'page-about';
             $scope.message=function(){
                 alert("order placed");
                 var postdata=DataService.view_order();
@@ -123,11 +127,11 @@
                 $http({
                     method  : 'POST',
                     url     : '/pizzaorder',
-                    data    : $scope.user, 
-                    headers : {'Content-Type': 'application/json'} 
+                    data    : $scope.user,
+                    headers : {'Content-Type': 'application/json'}
                 })
 
-              .success(function(data) { 
+              .success(function(data) {
                     if (data.errors) {
                         $scope.errorName = data.errors.name;
                         $scope.errorUserName = data.errors.username;
@@ -142,6 +146,7 @@
         });
 
         pApp.controller('loginCtrl', function ($scope, $http,DataService){
+          $scope.pageClass = 'page-contact';
             $http.get('/pizzaview').success(function(data) {
               $scope.details = data;
             });
@@ -149,4 +154,3 @@
                 console.log();
             }
         });
-
