@@ -6,14 +6,14 @@
         </tr>
         <tr>
             <td align="center">
-                <img ng-src="{{pizza.image}}" width="250"><br>
+                <img ng-src="{{pizzaDtls.pizza.image}}" width="250"><br>
             </td>
-            <td align="center"><i>{{pizza.description}}</i></td>
+            <td align="center"><i>{{pizzaDtls.pizza.description}}</i></td>
         </tr>
         <tr>
-            <td align="center"><h4> <i>RATE : &#8377 {{pizza.rate}} /- </i></h4></td>
+            <td align="center"><h4> <i>RATE : &#8377 {{pizzaDtls.pizza.rate}} /- </i></h4></td>
             <td align="center">
-                <select ng-model="user.qty" ng-click="enter()" >
+                <select ng-model="pizzaDtls.user.qty" ng-click="pizzaDtls.enter()" >
                     <option value="">Number Of Pieces</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -22,7 +22,7 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                     <option value="7">7</option>
-                </select>       
+                </select>
             </td>
 
         </tr>
@@ -31,6 +31,5 @@
             <td align="center"><a href="index.html">Back To Pizza List</a></td>
             <td align="center"><a href="#/cart">Add To Cart</a></td>
         </tr>
-    </table>    
+    </table>
     </div>
-

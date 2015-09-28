@@ -2,8 +2,6 @@
     <head>
         <meta charset="utf-8">
         <title>PiZzA CoUnTeR</title>
-
-
         <!-- CSS -->
         <!-- load bootstrap (bootswatch version) -->
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css" />
@@ -13,7 +11,18 @@
         <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
-        <script src="../javascripts/main.js"></script>
+        <script type="text/javascript" src="../javascripts/main.js"></script>
+        <script type="text/javascript" src="admin/admin.js"></script>
+        <script type="text/javascript" src="user/user.js"></script>
+        <script type="text/javascript" src="admin/admin_view/deliverCtrl.js"></script>
+        <script type="text/javascript" src="admin/admin_view/OrderViewServ.js"></script>
+        <script type="text/javascript" src="user/DataService.js"></script>
+        <script type="text/javascript" src="user/confirm_order/placeorderCtrl.js"></script>
+        <script type="text/javascript" src="user/pizza_cart/pizzaorderCtrl.js"></script>
+        <script type="text/javascript" src="user/pizza_details/pizzaDetailsCtrl.js"></script>
+        <script type="text/javascript" src="user/pizza_details/pizzaDetailsServ.js"></script>
+        <script type="text/javascript" src="user/pizza_gallery/pizzaCtrl.js"></script>
+        <script type="text/javascript" src="user/pizza_gallery/pizzaListServ.js"></script>
     </head>
     <body>
         <div class="page {{ pageClass }}" ng-view=""></div>
