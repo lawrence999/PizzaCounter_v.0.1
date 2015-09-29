@@ -1,5 +1,6 @@
 function pizzaDetailsServ($http){
-        this.getDetails = function(){
+  var vm = this;
+        vm.getDetails = function(){
                 return $http.get('/pizza');
         }
         pizzaDetailsServ.$inject = ['$http'];

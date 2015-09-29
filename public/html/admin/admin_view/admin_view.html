@@ -20,7 +20,9 @@
                     <li>Cost:{{i.cost}}</li>
                 </ul>
             </td>
-            <td align="center"> <a href="#/delivered/{{pizza._id}}">Delivered</a></td>
+            <!--<td align="center"> <a href="#/delivered/{{pizza._id}}">Delivered</a></td>-->
+            <td align="center"> <button ng-click="deliver.delFunction(pizza._id)">Delivered</button></td>
+
         </tr>
     </table>
     </center>

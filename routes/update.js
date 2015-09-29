@@ -18,13 +18,9 @@
         //HURRAY!! We are connected. :)
         console.log('Connection established to', url);
      var collection = db.collection('pizzaorder');
-
      var content=req.body;
-     console.log("updated");
-      console.log(content);
-     var id=new mongodb.ObjectID(content.Contactno);
-    collection.update({"_id":id},{$set:{"deliverystatus":false}},function(err,result){
-        console.log(result);
+     var id=new mongodb.ObjectID(content.id);
+     collection.update({"_id":id},{$set:{"deliverystatus":false}},function(err,result){
     });
       }
     });

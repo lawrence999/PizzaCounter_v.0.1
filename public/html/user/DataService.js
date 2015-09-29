@@ -1,21 +1,22 @@
  function DataService(){
     var plist = [];
     var total=0;
-        this.order_d = function(user) {
+    var vm = this;
+        vm.order_d = function(user) {
             plist.push(user);
             total=total+user.cost;
-            console.log(total);
         };
-
-        this.view_order = function(){
+        vm.view_order = function(){
             return plist;
         };
-
-        this.grand_total=function(){
+        vm.grand_total=function(){
             return total;
-            console.log(total);
+        };
+        vm.clear_plist=function(){
+          plist.splice(0,plist.length);
+          total=0;
+        };
 
-        }
 }
 
 angular

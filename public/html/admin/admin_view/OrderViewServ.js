@@ -1,5 +1,6 @@
 function OrderViewServ($http){
-        this.getOrderDetails = function(){
+  var vm=this;
+        vm.getOrderDetails = function(){
                 return $http.get('/pizzaview');
         }
         OrderViewServ.$inject = ['$http'];

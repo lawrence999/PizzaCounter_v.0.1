@@ -22,11 +22,10 @@
               if (err) {
                 console.log(err);
               } else if (result.length) {
-                console.log('Found:', result);
                 res.send(result);
                           } else {
                 console.log('No document(s) found with defined "find" criteria!');
-                res.send("No data to display!")
+                res.send("empty")
               }
               //Close connection
               db.close();

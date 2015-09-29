@@ -28,7 +28,7 @@
 
           } else {
             console.log('No document(s) found with defined "find" criteria!');
-            res.send("No data to display!")
+            res.send("empty");
           }
           //Close connection
           db.close();
