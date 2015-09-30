@@ -19,7 +19,7 @@ function deliverCtrl($scope,OrderViewServ,updateServ){
           vm.details.success(function(data) {
             console.log("hiii",data);
             if(data == 'empty') {
-              alert('All caught up!!');
+              // alert('All caught up!!');
               vm.details = {};
             } else {
               vm.details = data;
@@ -29,7 +29,7 @@ function deliverCtrl($scope,OrderViewServ,updateServ){
       vm.details=OrderViewServ.getOrderDetails();
       vm.details.success(function(data) {
         if(data == 'empty') {
-          alert('All caught up!!');
+          // alert('All caught up!!');
           vm.details = {};
         } else {
           vm.details = data;

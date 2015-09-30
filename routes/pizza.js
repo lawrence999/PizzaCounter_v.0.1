@@ -31,7 +31,7 @@
             res.send("empty");
           }
           //Close connection
-          db.close();
+          //db.close();
         });
       }
     });
