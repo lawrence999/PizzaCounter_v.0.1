@@ -35,47 +35,42 @@
     </div>
 </div>
 </nav>
-
-<!-- Search Navbar - END -->
-
-</div>
-
-<div style="float:left; width:50%; padding:150px" >
-<table width="100%" >
-    <tr>
-
-         <td ng-repeat="pizza in pizzaGlry.details | filter:query"colspan="3" align="center">
-           <a href="#/{{pizza.name}}"><img ng-src="{{pizza.image}}" width="100" height="100"></a>
-           <br><a href="#/{{pizza.name}}">{{pizza.name}}</a>
-         </td>
-    </tr>
-</table>
-</div>
-    <div >
-        <center>
+<div style="height:50px" ></div>
+<div style="width:100%" >
+  <div style="align:left;float:left;background-color:#CCFFFF;padding:5px" >
+      <center>
 <table>
-         <tr>
-            <td colspan="2" align="center">ADMIN LOGIN<br/></td>
-        </tr>
-        <tr>
-           <td colspan="2" align="center"> <br></td>
-       </tr>
-        <tr>
-            <td width="50%">Username</td>
-            <td><input type="text" ng-model="pizzaGlry.user"></td>
+       <tr>
+          <td colspan="2" align="center">ADMIN LOGIN<br/></td>
+      </tr>
+      <tr>
+         <td colspan="2" align="center"> <br></td>
+     </tr>
+      <tr >
+          <td width="25%" >Username </td>
+          <td><input type="text" ng-model="pizzaGlry.user"></td>
 
-        </tr>
-        <tr>
-            <td width="50%">Password</td>
-            <td colspan="2"><input type="password" ng-model="pizzaGlry.password"></td>
+      </tr>
+      <tr>
+         <td colspan="2" align="center"> <br></td>
+     </tr>
+      <tr>
+          <td width="25%">Password </td>
+          <td colspan="2"><input type="password" ng-model="pizzaGlry.password"></td>
 
-        </tr>
-        <tr >
-            <td align="center" colspan="3"><br/><button ng-click="pizzaGlry.check()">login</button></a></td>
-        </tr>
-    </table>
-    </center>
+      </tr>
+      <tr >
+          <td align="center" colspan="3"><br/><button ng-click="pizzaGlry.check()">login</button></a></td>
+      </tr>
+  </table>
+  </center>
 </div>
 
+ <div ng-repeat="pizza in pizzaGlry.details | filter:query" style="width:176px;font-size:80%;text-align:center;float:left;position:relative">
+   <a href="#/{{pizza.name}}"><img ng-src="{{pizza.image}}" width="100" height="100"></a>
+    <br><b><a href="#/{{pizza.name}}">{{pizza.name}}</a></b>
+</div>
+</div>
+</div>
 </body>
 </html>
