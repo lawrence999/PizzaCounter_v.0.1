@@ -4,7 +4,7 @@ function postServ($http) {
          return $http({
            method  : 'POST',
            url     : '/pizzaorder',
-           data    : obj, //forms user object //vm.user
+           data    : obj, 
            headers : {'Content-Type': 'application/json'}
          })
        }

@@ -3,7 +3,6 @@ function pizzaorderCtrl($scope,DataService){
       $scope.pageClass = 'page-home';
           vm.details = DataService.view_order();
           vm.total=DataService.grand_total();
-          console.log(vm.details);
           pizzaorderCtrl.$inject = ['$scope','DataService'];
 
 }

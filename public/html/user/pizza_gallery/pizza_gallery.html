@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" style="width:100%">
 <!-- Search Navbar - START -->
 <nav class="navbar navbar-default" role="navigation">
 <div class="navbar-header" >
@@ -51,32 +51,31 @@
     </tr>
 </table>
 </div>
-    <!-- <form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>-->
-
     <div >
         <center>
 <table>
          <tr>
-            <td colspan="2" align="center">ADMIN LOGIN</td>
+            <td colspan="2" align="center">ADMIN LOGIN<br/></td>
         </tr>
-
+        <tr>
+           <td colspan="2" align="center"> <br></td>
+       </tr>
         <tr>
             <td width="50%">Username</td>
-            <td><input type="text" ng-model="user"></td>
+            <td><input type="text" ng-model="pizzaGlry.user"></td>
 
         </tr>
         <tr>
             <td width="50%">Password</td>
-            <td colspan="2"><input type="password" ng-model="password"></td>
+            <td colspan="2"><input type="password" ng-model="pizzaGlry.password"></td>
 
         </tr>
         <tr >
-            <td align="center" colspan="3"><a href="#/login">login</a></td>
+            <td align="center" colspan="3"><br/><button ng-click="pizzaGlry.check()">login</button></a></td>
         </tr>
     </table>
     </center>
 </div>
-    <!--</form>-->
 
 </body>
 </html>

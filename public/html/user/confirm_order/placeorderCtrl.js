@@ -8,19 +8,23 @@ function placeorderCtrl($scope,DataService,postServ){
           vm.user.deliverystatus=true;
           vm.insert = postServ.postCartDtls(vm.user);
           alert("order placed");
-          vm.insert.success(function(data) {
-              if (data.errors) {
-                  vm.errorName = data.errors.name;
-                  vm.errorUserName = data.errors.username;
-                  vm.errorEmail = data.errors.email;
-              } else {
-                  vm.message = data.message;
-              }
-          });
+          vm.user={};
+          //DataService.clear_plist();
+          // vm.insert.success(function(data) {
+          //
+          //     if (data.errors) {
+          //         vm.errorName = data.errors.name;
+          //         vm.errorUserName = data.errors.username;
+          //         vm.errorEmail = data.errors.email;
+          //     } else {
+          //         vm.message = data.message;
+          //
+          //
+          //     }
+          // });
        };
-      //  vm.user={};
     placeorderCtrl.$inject = ['$scope','DataService','postServ'];
-    // DataService.clear_plist();
+
 
 
 }
